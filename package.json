@@ -1,6 +1,10 @@
 {
   "name": "@tensflare/mcp",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tensflare/truss-mcp.git"
+  },
   "publishConfig": { "access": "public" },
   "description": "MCP server for Truss — join, list, and verify evidence across participant orgs",
   "type": "module",
