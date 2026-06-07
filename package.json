@@ -1,0 +1,36 @@
+{
+  "name": "@tensflare/mcp",
+  "version": "0.1.0",
+  "publishConfig": { "access": "public" },
+  "description": "MCP server for Truss — join, list, and verify evidence across participant orgs",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "audit": "npm audit --audit-level=high",
+    "outdated": "npm outdated",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tensflare/tap": "^0.1.0",
+    "fastify": "^5.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0",
+    "tsx": "^4.0.0",
+    "vitest": "^3.1.0"
+  }
+}
